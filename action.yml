@@ -15,4 +15,4 @@ inputs:
     default: ""
 runs:
   using: "docker"
-  image: "docker://taichunmin/github-actions-ansible-vault:latest"
+  image: "docker://ghcr.io/aellwein/github-actions-ansible-vault:latest"
