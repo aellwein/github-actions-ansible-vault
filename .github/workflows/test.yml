@@ -18,7 +18,7 @@ jobs:
           echo "uid=$(id -u)" >> $GITHUB_OUTPUT
           echo "gid=$(id -g)" >> $GITHUB_OUTPUT
       - name: encrypt test file
-        uses: taichunmin/github-actions-ansible-vault@v1
+        uses: aellwein/github-actions-ansible-vault@v1
         env:
           UID: ${{ steps.uid-gid.outputs.uid }}
           GID: ${{ steps.uid-gid.outputs.gid }}
@@ -30,7 +30,7 @@ jobs:
       - name: print encrypted file
         run: cat foo.yml
       - name: decrypt test file
-        uses: taichunmin/github-actions-ansible-vault@v1
+        uses: aellwein/github-actions-ansible-vault@v1
         env:
           UID: ${{ steps.uid-gid.outputs.uid }}
           GID: ${{ steps.uid-gid.outputs.gid }}
