@@ -1,4 +1,4 @@
-FROM alpine:3.24.2
+FROM alpine:3.24.3
 ENV ANSIBLE_VAULT_PASSWORD_FILE='/.vault_key' INPUT_COMMAND='ansible-vault --version' INPUT_VAULT_KEY=''
 ENTRYPOINT ["/entrypoint.sh"]
 COPY entrypoint.sh /entrypoint.sh
